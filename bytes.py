@@ -30,3 +30,4 @@ class byte:
 #print("Ausagabe:", ka.value)
 #print("Eingabe bit:", bin(ka.value)[2:].zfill(8))
 ##print(int(ka.value, 2))
+#test
