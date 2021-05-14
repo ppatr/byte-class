@@ -10,10 +10,10 @@ class byte:
         if val == True:
             return self.value | (1 << bitnr)
         if val == False:
-            return self.value & ~(1 << bitnr)
+            return self.value and ~(1 << bitnr)
 
     def is_set(self, bitnr: int):
-        if (self.value & (1 << bitnr)):
+        if (self.value and (1 << bitnr)):
             return True
         else:
             return False
@@ -22,7 +22,7 @@ class byte:
         pass
 
 
-#ka = byte(199)
+ka = byte(199)
 #print(ka.is_set(3))
 #print("Eingabe:", ka.value)
 #print("Eingabe bit:", bin(ka.value)[2:].zfill(8))
@@ -31,3 +31,6 @@ class byte:
 #print("Eingabe bit:", bin(ka.value)[2:].zfill(8))
 ##print(int(ka.value, 2))
 #test
+
+
+print("HI")
