@@ -1,10 +1,6 @@
 class byte:
     def __init__(self, value: int):
         self.value = value
-        self.bitnr = 0
-        self.val = 0
-        self.bitnr1 = 0
-        self.bitnr2 = 0
 
     def set_bit(self, bitnr: int, val: bool):
         if val == True:
@@ -18,7 +14,8 @@ class byte:
         else:
             return False
 
-    def swap_bit(self, bitnr1, bitnr2):
+    def swap_bit(self, bitnr1, bitnr2): 
+        #Quelle : https://www.geeksforgeeks.org/swap-bits-in-a-given-number/
         set1 = (self.value >> bitnr1) & ((1 << 1) -1)
         set2 = (self.value >> bitnr2) & ((1 << 1) -1)
         mask = (set1 ^ set2)
@@ -27,10 +24,10 @@ class byte:
         return result 
 
 
-#ka = byte(199)
+ka = byte(199)
 
-#print(bin(199))
-#print(bin(ka.swap_bit(4,1)))
+print(bin(199))
+print(bin(ka.swap_bit(4,1)))
 #print(ka.is_set(3))
 #print("Eingabe:", ka.value)
 #print("Eingabe bit:", bin(ka.value)[2:].zfill(8))
@@ -38,4 +35,3 @@ class byte:
 #print("Ausagabe:", ka.value)
 #print("Eingabe bit:", bin(ka.value)[2:].zfill(8))
 ##print(int(ka.value, 2))
-
